@@ -33,7 +33,7 @@ const translations = {
     quote: 'Solicitar Presupuesto',
     heroWords: {
       line1: ['Construcción,', 'Mantenimiento', 'y reparaciones'],
-      line2: ['Trabajo confiable', 'para hogares y negocios'],
+      line2: ['Trabajo confiable para hogares y negocios'],
     },
     heroSubtitle:
       'En Sertec Plus ayudamos a mantener y mejorar espacios con soluciones prácticas de construcción, mantenimiento y reparación. Somos un equipo pequeño con experiencia, enfocado en hacer bien el trabajo y cumplir con lo prometido.',
@@ -149,7 +149,7 @@ const translations = {
     quote: 'Request a Quote',
     heroWords: {
       line1: ['Construction,', 'Maintenance', '& Repairs'],
-      line2: ['Reliable work', 'for homes and businesses'],
+      line2: ['Reliable work for homes and businesses'],
     },
     heroSubtitle:
       'At Sertec Plus we maintain and improve spaces with practical construction, maintenance, and repair solutions. A small experienced team focused on doing the job right and keeping our promises.',
@@ -784,11 +784,6 @@ function App() {
               playsInline
             />
             <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 bg-[#f5b800] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Play className="text-[#1a1a1a] ml-1" size={32} fill="#1a1a1a" />
-              </div>
-            </div>
           </div>
         </div>
       </section>
