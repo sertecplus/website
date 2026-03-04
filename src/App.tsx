@@ -30,7 +30,7 @@ const translations = {
     quote: 'Solicitar Presupuesto',
     heroWords: {
       line1: ['Construcción,', 'Mantenimiento', 'y reparaciones'],
-      line2: ['Trabajo confiable para hogares y negocios'],
+      line2: ['Trabajo confiable', 'para hogares y negocios'],
     },
     heroSubtitle:
       'En Sertec Plus ayudamos a mantener y mejorar espacios con soluciones prácticas de construcción, mantenimiento y reparación. Somos un equipo pequeño con experiencia, enfocado en hacer bien el trabajo y cumplir con lo prometido.',
@@ -80,12 +80,14 @@ const translations = {
         text: 'Excelente servicio. Cumplieron con los tiempos y el resultado quedó muy bien. Un equipo responsable y fácil de trabajar.',
         name: 'María González',
         role: 'Lexmark',
+        rating: 5,
       },
       {
         company: 'BERENDSEN',
         text: 'Muy profesionales y atentos durante todo el proceso. Recomiendo su trabajo para proyectos de construcción o mantenimiento.',
         name: 'Carlos Rodríguez',
         role: 'Berendsen',
+        rating: 5,
       },
     ],
     faqTitle: 'PREGUNTAS FRECUENTES',
@@ -144,7 +146,7 @@ const translations = {
     quote: 'Request a Quote',
     heroWords: {
       line1: ['Construction,', 'Maintenance', '& Repairs'],
-      line2: ['Reliable work for homes and businesses'],
+      line2: ['Reliable work', 'for homes and businesses'],
     },
     heroSubtitle:
       'At Sertec Plus we maintain and improve spaces with practical construction, maintenance, and repair solutions. A small experienced team focused on doing the job right and keeping our promises.',
@@ -194,12 +196,14 @@ const translations = {
         text: 'Excellent service. They met the deadlines and the result was great. Responsible team and easy to work with.',
         name: 'María González',
         role: 'Lexmark',
+        rating: 5,
       },
       {
         company: 'BERENDSEN',
         text: 'Very professional and attentive throughout the process. I recommend their work for construction or maintenance projects.',
         name: 'Carlos Rodríguez',
         role: 'Berendsen',
+        rating: 5,
       },
     ],
     faqTitle: 'FREQUENTLY ASKED QUESTIONS',
