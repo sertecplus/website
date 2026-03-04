@@ -24,6 +24,9 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+const publicAsset = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 const translations = {
   es: {
     nav: ['Inicio', 'Servicios', 'Proyectos', 'Contacto'],
@@ -490,7 +493,7 @@ function App() {
         }`}>
           <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="Sertec Plus" className="h-28 w-auto" />
+              <img src={publicAsset('logo.png')} alt="Sertec Plus" className="h-28 w-auto" />
               <span className={`font-bold text-xl font-['Montserrat'] ${isScrolled ? 'text-[#1a1a1a]' : 'text-white'}`}>
                 SERTEC PLUS
               </span>
@@ -625,7 +628,7 @@ function App() {
             <div className="relative">
               <div className="hero-image relative rounded-3xl overflow-hidden aspect-[4/3]">
                 <img 
-                  src="/hero-workers.jpg" 
+                  src={publicAsset('hero-workers.jpg')} 
                   alt="Construction workers" 
                   className="w-full h-full object-cover"
                 />
@@ -700,17 +703,17 @@ function App() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {t.services.map((service, i) => (
-              <div 
-                key={i}
-                className="service-circle group relative aspect-square rounded-full overflow-hidden cursor-pointer animate-pulse-soft"
-                style={{ animationDelay: `${i * 0.5}s` }}
-              >
-                <img 
-                  src={service.img} 
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                {t.services.map((service, i) => (
+                  <div 
+                    key={i}
+                    className="service-circle group relative aspect-square rounded-full overflow-hidden cursor-pointer animate-pulse-soft"
+                    style={{ animationDelay: `${i * 0.5}s` }}
+                  >
+                    <img 
+                      src={publicAsset(service.img)} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
                 <div className="absolute inset-0 bg-black/40 transition-colors group-hover:bg-black/30"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                   <h3 className="text-2xl md:text-3xl font-bold font-['Montserrat'] text-center">
@@ -742,17 +745,17 @@ function App() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            {t.projects.map((project, i) => (
-              <div 
-                key={i}
-                className="project-card group relative overflow-hidden rounded-2xl cursor-pointer"
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={project.img} 
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:grayscale-[30%]"
-                  />
+                {t.projects.map((project, i) => (
+                  <div 
+                    key={i}
+                    className="project-card group relative overflow-hidden rounded-2xl cursor-pointer"
+                  >
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img 
+                        src={publicAsset(project.img)} 
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:grayscale-[30%]"
+                      />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="text-white font-bold font-['Montserrat'] text-lg">{project.title}</h3>
@@ -772,8 +775,8 @@ function App() {
             onClick={() => setVideoOpen(true)}
           >
             <video
-              src="/video.mp4"
-              poster="/video-thumbnail.jpg"
+              src={publicAsset('video.mp4')}
+              poster={publicAsset('video-thumbnail.jpg')}
               className="w-full aspect-video object-cover"
               muted
               autoPlay
@@ -974,7 +977,7 @@ function App() {
             <div className="grid md:grid-cols-5 gap-12 mb-12">
               <div className="md:col-span-2">
                 <div className="flex items-center gap-3 mb-6">
-                  <img src="/logo.png" alt="Sertec Plus" className="h-20 w-auto" />
+                  <img src={publicAsset('logo.png')} alt="Sertec Plus" className="h-20 w-auto" />
                   <span className="font-bold text-xl font-['Montserrat']">SERTEC PLUS</span>
                 </div>
                 <p className="text-gray-400 mb-6 max-w-sm">
@@ -1070,8 +1073,8 @@ function App() {
         <DialogContent className="max-w-4xl p-0 bg-black border-none">
           <div className="aspect-video bg-black flex items-center justify-center relative">
             <video
-              src="/video.mp4"
-              poster="/video-thumbnail.jpg"
+              src={publicAsset('video.mp4')}
+              poster={publicAsset('video-thumbnail.jpg')}
               className="w-full h-full object-cover"
               controls
               playsInline
