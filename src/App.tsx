@@ -635,7 +635,11 @@ function App() {
               </div>
               
               {/* Rotating Badge */}
-              <div className="hero-badge absolute -bottom-6 -right-6 w-32 h-32">
+              <div
+                className="hero-badge absolute -bottom-6 -right-6 w-32 h-32 cursor-pointer"
+                onClick={() => scrollToSection('contact')}
+                aria-label="Ir al formulario de contacto"
+              >
                 <div className="relative w-full h-full">
                   <svg className="animate-spin-slow w-full h-full" viewBox="0 0 100 100">
                     <defs>
@@ -1040,10 +1044,10 @@ function App() {
                   <li className="flex items-center gap-2">
                     <Mail size={16} className="text-[#f5b800]" />
                     <a
-                      href="mailto:info@sertec.com"
+                      href="mailto:info@sertecplus.com"
                       className="hover:text-[#f5b800] transition-colors"
                     >
-                      info@sertec.com
+                      info@sertecplus.com
                     </a>
                   </li>
                 </ul>
